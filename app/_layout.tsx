@@ -13,7 +13,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    'sora-m': require('../assets/fonts/Sora-Medium.ttf'),
   });
 
   useEffect(() => {
@@ -29,8 +29,8 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="(app)" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );

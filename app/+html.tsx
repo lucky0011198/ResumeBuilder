@@ -1,11 +1,16 @@
+import { router } from 'expo-router';
 import { ScrollViewStyleReset } from 'expo-router/html';
-import { type PropsWithChildren } from 'react';
+import { useEffect, type PropsWithChildren } from 'react';
 
 /**
  * This file is web-only and used to configure the root HTML for every web page during static rendering.
  * The contents of this function only run in Node.js environments and do not have access to the DOM or browser APIs.
  */
 export default function Root({ children }: PropsWithChildren) {
+  // useEffect(() => {
+  //   // This navigation event will trigger the error above.
+  //   router.replace('/init');
+  // }, []);
   return (
     <html lang="en">
       <head>
